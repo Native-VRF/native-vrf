@@ -1,0 +1,20 @@
+import hre, { ethers } from "hardhat";
+import addressUtils from "../../utils/addressUtils";
+
+async function main() {
+    const NativeVRF = await ethers.getContractFactory("NativeVRF");
+    const nativeVRF = await NativeVRF.deploy(1150);
+
+    console.log({ nativeVRF: nativeVRF.address });
+
+    await addressUtils.saveAddresses(hre.network.name, {
+        NativeVRF: nativeVRF.address,
+    });
+}
+
+// We recommend this pattern to be able to use async/await everywhere
+// and properly handle errors.
+main().catch((error) => {
+    console.error(error);
+    process.exitCode = 1;
+});
