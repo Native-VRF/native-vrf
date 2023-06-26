@@ -29,7 +29,7 @@ Example:
 npx hardhat run scripts/deploy/nativevrf.ts --network kubchain_test
 ```
 
-## Run fulfillder bot
+## Run fulfiller bot
 Run fulfiller bot script
 ```shell
 npx hardhat run scripts/examples/fulfill-bot.ts --network <target-network>
@@ -52,3 +52,11 @@ npx hardhat run scripts/examples/request.ts --network <target-network>
 ```shell
 npx hardhat run scripts/examples/record.ts --network <target-network>
 ```
+
+## Full article
+You can read full article that explains the building blocks and analysis of Native VRF and other RNGs. https://www.mdpi.com/2079-8954/11/7/326 
+
+## Citation
+Please cite our research article if you use this library in your research or projects.
+
+Werapun W, Karode T, Suaboot J, Arporntip T, Sangiamkul E. NativeVRF: A Simplified Decentralized Random Number Generator on EVM Blockchains. Systems. 2023; 11(7):326. https://doi.org/10.3390/systems11070326
